@@ -1,0 +1,22 @@
+@import '../../../scss/_variables';
+
+.filter-element {
+    margin-top: 25px;
+}
+
+.filter-select-element {
+    border: 0;
+    direction: rtl;
+    color: getColor(blue);
+    font-weight: bold;
+    font-size: 18.4px;
+    line-height: 125%;
+
+    option {
+        font-weight: bold;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

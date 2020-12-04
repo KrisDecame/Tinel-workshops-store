@@ -1,0 +1,32 @@
+@import '../../scss/_variables';
+@import './footer.media';
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    background-color: getColor(lighter-grey);
+    border-top: 1px solid white;
+
+    h6 {
+        margin-left: 80px;
+        color: getColor(light-grey);
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 10px;
+            margin-right: 3px;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@include media();

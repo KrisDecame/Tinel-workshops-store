@@ -1,0 +1,30 @@
+@import '../../scss/variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: getColor(yellow);
+    padding: 10px 20px;
+}
+
+.navbar__cart-button {
+    img {
+        margin-right: 10px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 125%;
+    }
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}

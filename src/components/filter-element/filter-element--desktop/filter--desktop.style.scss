@@ -1,0 +1,52 @@
+@import '../../../scss/_variables';
+
+.filter-element {
+    margin-top: 0;
+    padding-left: 20px;
+
+    img {
+        width: 20px;
+        margin-right: 20px;
+    }
+}
+
+.filter-element__title {
+    margin: 0;
+    margin-left: 40px;
+    margin-top: 45px;
+    font-size: 15px;
+    line-height: 125%;
+    color: getColor(light-grey);
+}
+
+.filter-option {
+    display: flex;
+    font-size: 23px;
+    line-height: 125%;
+    margin: 25px 0;
+
+    &:hover {
+        .filter-option__category {
+            color: getColor(blue);
+        }
+        cursor: pointer;
+    }
+}
+
+.filter-option__category, .filter-option--all {
+    border-bottom: 2px solid transparent;
+}
+
+.filter-option--all {
+    margin-left: 40px;
+    width: fit-content;
+
+    &:hover {
+        color: getColor(blue);
+    }
+}
+
+.active {
+    border-bottom: 2px solid getColor(blue);
+    color: getColor(blue);
+}

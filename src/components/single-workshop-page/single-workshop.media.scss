@@ -1,0 +1,112 @@
+@mixin media() {
+    @media only screen and (min-width: 800px) {
+
+        .single-workshop-back-button {
+            font-size: 15px;
+        }
+
+        .single-workshop__container {
+            min-height: 100vh;
+            display: flex;
+
+            aside {
+                flex: 1
+            }
+        }
+
+        .single-workshop__summary {
+            flex: 3;
+        }
+
+        .single-workshop__content-block {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .single-workshop__description-block {
+            margin: 40px 0;
+        }
+
+        .single-workshop__name {
+            font-size: 27px;
+            margin: 20px 0;
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        .single-workshop__add-to-cart {
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            margin: 40px;
+            padding: 50px 40px;
+            background-color: #fff;
+            box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+            box-sizing: border-box;
+
+            div {
+                display: flex;
+            }
+
+            h5 {
+                margin: 0;
+                font-size: 23px;
+            }
+
+            h2 {
+                margin: 20px 0 30px 0;
+                font-size: 40px;
+
+                span {
+                    font-size: 0.5em;
+                    text-transform: uppercase;
+                }
+            }
+
+            input {
+                width: 50px;
+                border: 1px solid getColor(blue);
+                font-size: 23px;
+            }
+
+            .single-workshop__atc-button {
+                width: 120px;
+                justify-content: center;
+                margin-left: 10px;
+                height: fit-content;
+            }
+        }
+
+        .similar-workshops {
+            display: flex;
+            flex-direction: row;
+            background-color: getColor(lighter-grey);
+
+            aside {
+                flex: 1;
+            }
+        }
+
+        .similar-workshops__main {
+            padding: 50px 20px;
+            flex: 3;
+
+            .workshop {
+                margin-left: 0;
+            }
+
+            h2 {
+                text-align: left;
+            }
+        }
+
+        .similar-workshops__container {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+

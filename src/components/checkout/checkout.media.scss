@@ -1,0 +1,99 @@
+@mixin media() {
+
+    @media only screen and (min-width: 800px) {
+
+        .checkout {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: initial;
+            background-color: #fff;
+            padding: 40px;
+            overflow-y: initial;
+            z-index: 5;
+            width: 760px;
+            box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+            border-radius: 16px;
+            padding: 90px;
+            box-sizing: border-box;
+
+            input, select {
+                width: 560px;
+            }
+
+            #agreement {
+                width: initial;
+            }
+        }
+
+        .checkout__header {
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        .checkout__date-gender-block {
+            display: flex;
+
+            .checkout__form-block {
+                flex: 1;
+            }
+
+            .checkout__date-block {
+                margin-right: 20px;
+            }
+
+            .checkout__gender-block {
+                margin-left: 20px;
+            }
+
+            input, select {
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+        .checkout__outer-layer {
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(black, 0.5);
+            z-index: 0;
+        }
+
+        .checkout__form-submit-button {
+            width: 170px;
+            height: 60px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        .checkout-message {
+            position: fixed;
+            top: 60px;
+            left: 50%;
+            width: 760px;
+            height: initial;
+            transform: translateX(-50%);
+            background-color: getColor(white);
+            z-index: 10;
+            box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+            border-radius: 16px;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .checkout-message__content-block {
+            width: 50%;
+        }
+
+        .checkout-message__back-button {
+            width: 200px;
+            margin: 0;
+        }
+    }
+}

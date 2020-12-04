@@ -1,0 +1,28 @@
+@mixin media() {
+
+    @media only screen and (min-width: 800px) {
+
+        .workshops-container {
+            flex: 3;
+        }
+
+        .workshops-container__title-block {
+            margin-bottom: 40px;
+        }
+
+        .workshops-container__workshops {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: ". . ." ". . ." ". . ." ". . load-button";
+        }
+
+        .workshops-container__load-button {
+            grid-area: load-button;
+            width: fit-content;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+    }
+
+}

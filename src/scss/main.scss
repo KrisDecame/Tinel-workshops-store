@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@500;600;700&display=swap');
+@import './main.media.scss';
+
+body {
+    font-family: 'Livvic', sans-serif;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none
+    }
+}
+
+@include media();

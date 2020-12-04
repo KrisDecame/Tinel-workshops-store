@@ -1,0 +1,63 @@
+@import '../../scss/variables';
+@import './workshop-container.media.scss';
+
+.workshops-container__workshops {
+    display: flex;
+    flex-direction: column;
+}
+
+.workshops-container__title-block {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 125%;
+        margin: 0;
+        color: getColor(darker-grey);
+    }
+
+    h6 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 15px;
+        color: getColor(light-grey);
+
+        span {
+            color: getColor(darker-grey);
+        }
+    }
+}
+
+.workshops-container__load-button {
+    position: relative;
+    font-weight: bold;
+    font-size: 18.4px;
+    padding: 5px 0;
+    margin: 30px 35px;
+    align-self: center;
+    line-height: 125%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0px;
+        height: 2px;
+        background-color: getColor(blue);
+        transition: all 500ms;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+@include media();

@@ -1,0 +1,139 @@
+@import '../../scss/variables';
+@import './checkout.media.scss';
+
+.checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: -1px -2px 16px rgba(127, 127, 127, 0.25);
+    overflow-y: scroll;
+}
+
+.checkout__header {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        font-size: 32px;
+        margin: 0;
+    }
+}
+
+.checkout__description {
+    width: 70%;
+    color: getColor(light-grey);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 125%;
+}
+
+.checkout__form-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 0;
+
+    label {
+        font-weight: bold;
+        font-size: 13.5px;
+        line-height: 125%;
+    }
+
+    input, select {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid getColor(light-grey);
+        padding: 15px 0;
+        transition: all 500ms;
+
+        &:focus {
+            border-bottom: 2px solid getColor(blue);
+            background-color: getColor(lighter-grey);
+            outline: none;
+        }
+    }
+
+    select {
+        option {
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
+}
+
+.checkout__date-block {
+    label {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 5px;
+        }
+    }
+}
+
+.checkout__form-block--agreement {
+    display: flex;
+}
+
+.checkout__form-submit-button {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0 100px 0;
+    font-weight: bold;
+    font-size: 18.4px;
+    line-height: 125%;
+    background-color: getColor(light-yellow);
+    color: getColor(darker-grey);
+    border-radius: 6px;
+}
+
+.checkout__outer-layer {
+    display: none;
+}
+
+.checkout-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: getColor(white);
+    z-index: 10;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-message__content-block {
+    h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 125%;
+    }
+
+    h6 {
+        font-weight: 600;
+        font-size: 13.5px;
+        line-height: 125%;
+        color: getColor(light-grey);
+    }
+}
+
+.checkout-message__back-button {
+    width: 100%;
+    height: 60px;
+    font-weight: bold;
+    background-color: getColor(yellow);
+    margin-top: 100px;
+    box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+    border-radius: 6px;
+    font-size: 18.4px;
+    line-height: 125%;
+}
+
+
+@include media();
